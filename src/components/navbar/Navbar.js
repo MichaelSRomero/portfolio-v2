@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 import NavItem from "./NavItem";
 import styled from 'styled-components';
@@ -10,13 +10,6 @@ const StyledNav = styled.nav`
 `
 
 const Navbar = ({ logo, navItems, isMenuOpened = false, openMenu = () => {} }) => {
-  // const [isMenuOpened, setMenuState] = useState(false);
-
-  // const openMenu = () => {
-  //   setMenuState(!isMenuOpened);
-  //   afterMenuCallback();
-  // }
-
   return (
     <StyledNav className="navbar is-fixed-top" role="navigation" aria-label="main navigation">
       <div className="navbar-brand">

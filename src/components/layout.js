@@ -7,10 +7,11 @@
 
 import React, { useState } from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+// import { useStaticQuery, graphql } from "gatsby"
 
 import NavBar from "./navbar/Navbar";
 import styled from 'styled-components';
+import Modal from "./modal/Modal";
 
 const StyledMain = styled.main`
   height: 100vh;
@@ -33,12 +34,13 @@ const Layout = ({ children }) => {
   return (
     <>
       <header>
-        <NavBar navItems={ navItems } openMenu={openModal} isMenuOpened={isModalOpen}/>
+        <NavBar navItems={ navItems } openMenu={ openModal } isMenuOpened={ isModalOpen }/>
       </header>
       <StyledMain>
-        <div className={"modal" + (isModalOpen ? " is-active" : "") } >
+        {/* <div className={"modal" + (isModalOpen ? " is-active" : "") } >
           <div className="modal-background" onClick={openModal}></div>
-        </div>
+        </div> */}
+        <Modal isModalOpen={ isModalOpen } openModal={ openModal } closeSlot={ null } />
         { children }
       </StyledMain>
       <footer>
