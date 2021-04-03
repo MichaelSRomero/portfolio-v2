@@ -5,47 +5,73 @@
  * See: https://www.gatsbyjs.com/docs/use-static-query/
  */
 
-import * as React from "react"
+import React, { useState } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
-import Header from "./header"
+import NavBar from "./navbar/Navbar";
+import styled from 'styled-components';
+
+const StyledMain = styled.main`
+  height: 100vh;
+`
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
+  const [isModalOpen, setModal] = useState(false);
+
+  const openModal = () => setModal(!isModalOpen);
+  // const data = useStaticQuery(graphql`
+  //   query SiteTitleQuery {
+  //     site {
+  //       siteMetadata {
+  //         title
+  //       }
+  //     }
+  //   }
+  // `)
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-        <footer
-          style={{
-            marginTop: `2rem`,
-          }}
-        >
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
-      </div>
+      <header>
+        <NavBar navItems={ navItems } openMenu={openModal} isMenuOpened={isModalOpen}/>
+      </header>
+      <StyledMain>
+        <div className={"modal" + (isModalOpen ? " is-active" : "") } >
+          <div className="modal-background" onClick={openModal}></div>
+        </div>
+        { children }
+      </StyledMain>
+      <footer>
+        © {new Date().getFullYear()}, Built with
+        {` `}
+        <a href="https://www.gatsbyjs.com">Gatsby</a>
+      </footer>
     </>
   )
 }
+
+const navItems = [
+  {
+    title: "about",
+    href: "#",
+  },
+  {
+    title: "skills",
+    href: "#",
+  },
+  {
+    title: "experience",
+    href: "#",
+  },
+  {
+    title: "projects",
+    href: "#",
+  },
+  {
+    title: "contact",
+    href: "#",
+  },
+]
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,

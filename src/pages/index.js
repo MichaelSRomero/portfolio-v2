@@ -4,16 +4,9 @@ import { StaticImage } from "gatsby-plugin-image"
 
 import "../styles/main.scss";
 
-import styled from 'styled-components';
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Navbar from "../components/navbar/Navbar";
 import Landing from "../components/landing/Landing";
-
-// Use Bulma's built in Navbar
-const StyledMain = styled.main`
-  height: 100vh;
-`
 
 const IndexPage = () => (
   // <Layout>
@@ -34,37 +27,9 @@ const IndexPage = () => (
   //     <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
   //   </p>
   // </Layout>
-  <>
-    <header>
-      <Navbar navItems={navitems} />
-    </header>
-    <StyledMain>
-      <Landing />
-    </StyledMain>
-  </>
+  <Layout>
+    <Landing />
+  </Layout>
 )
-
-const navitems = [
-  {
-    title: "about",
-    href: "#",
-  },
-  {
-    title: "skills",
-    href: "#",
-  },
-  {
-    title: "experience",
-    href: "#",
-  },
-  {
-    title: "projects",
-    href: "#",
-  },
-  {
-    title: "contact",
-    href: "#",
-  },
-]
 
 export default IndexPage

@@ -19,6 +19,7 @@ const Block = ({ amount, background, width = "100%", height = "auto" }) => {
     for (let i = 0; i < amount; i++) {
       blocks.push(
         <StyledBlockDiv
+          key={`BlockDiv${amount}${i}`}
           backgroundColor={background}
           width={width}
           height={height}>
