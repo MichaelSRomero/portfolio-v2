@@ -6,11 +6,11 @@ const NavItem = ({title, href}) => {
   // Wrap in anchor tag to enable smooth scrolling
   // npm i gatsby-plugin-anchor-links
   return (
-    <li>
+    <a className="navbar-item">
       <h3>
         <span className="has-text-weight-bold is-size-4">{capitalLetter}</span> {title.slice(1)}
       </h3>
-    </li>
+    </a>
   )
 };
 
