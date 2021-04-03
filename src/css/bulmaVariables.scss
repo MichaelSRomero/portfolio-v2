@@ -5,3 +5,7 @@ $secondary: #8EAAC6;
 $complimentary: #EBF5FF;
 
 @import "~bulma/bulma.sass";
+
+:export {
+  primary: $primary;
+}

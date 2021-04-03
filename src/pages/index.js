@@ -8,6 +8,7 @@ import "../css/global.scss";
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Navbar from "../components/navbar/Navbar";
+import Landing from "../components/landing/Landing";
 
 const IndexPage = () => (
   // <Layout>
@@ -28,11 +29,14 @@ const IndexPage = () => (
   //     <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
   //   </p>
   // </Layout>
-  <div>
+  <>
     <header>
       <Navbar navItems={navitems} />
     </header>
-  </div>
+    <main>
+      <Landing />
+    </main>
+  </>
 )
 
 const navitems = [
