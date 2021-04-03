@@ -8,7 +8,7 @@ const NavItem = ({title, href}) => {
   return (
     <li>
       <h3>
-        <span>{capitalLetter}</span> {title.slice(1)}
+        <span className="has-text-weight-bold is-size-4">{capitalLetter}</span> {title.slice(1)}
       </h3>
     </li>
   )

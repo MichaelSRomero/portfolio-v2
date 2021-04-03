@@ -2,6 +2,7 @@ import * as React from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
+import "../css/bulmaVariables.scss";
 import "../css/global.scss";
 
 import Layout from "../components/layout"
@@ -29,9 +30,32 @@ const IndexPage = () => (
   // </Layout>
   <div>
     <header>
-      <Navbar />
+      <Navbar navItems={navitems} />
     </header>
   </div>
 )
+
+const navitems = [
+  {
+    title: "about",
+    href: "#",
+  },
+  {
+    title: "skills",
+    href: "#",
+  },
+  {
+    title: "experience",
+    href: "#",
+  },
+  {
+    title: "projects",
+    href: "#",
+  },
+  {
+    title: "contact",
+    href: "#",
+  },
+]
 
 export default IndexPage

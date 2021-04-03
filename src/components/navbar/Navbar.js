@@ -2,12 +2,16 @@ import * as React from "react";
 
 import "./navbar.scss";
 
+import NavItem from "./NavItem";
+
 const Navbar = ({logo, navItems}) => {
   return (
-    <nav className="is-flex">
+    <nav className="is-flex is-justify-content-space-between">
       {/* Insert Logo */}
-      <ul>
+      Logo
+      <ul className="is-flex">
         {/* Insert Items */}
+        {navItems.map(item => <NavItem {...item} />)}
       </ul>
     </nav>
   )
