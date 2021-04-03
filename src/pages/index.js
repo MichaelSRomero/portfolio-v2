@@ -4,10 +4,16 @@ import { StaticImage } from "gatsby-plugin-image"
 
 import "../styles/main.scss";
 
+import styled from 'styled-components';
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Navbar from "../components/navbar/Navbar";
 import Landing from "../components/landing/Landing";
+
+// Use Bulma's built in Navbar
+const StyledMain = styled.main`
+  height: 100vh;
+`
 
 const IndexPage = () => (
   // <Layout>
@@ -32,9 +38,9 @@ const IndexPage = () => (
     <header>
       <Navbar navItems={navitems} />
     </header>
-    <main>
+    <StyledMain>
       <Landing />
-    </main>
+    </StyledMain>
   </>
 )
 
