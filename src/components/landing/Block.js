@@ -20,9 +20,9 @@ const Block = ({ amount, background, width = "100%", height = "auto" }) => {
       blocks.push(
         <StyledBlockDiv
           key={`BlockDiv${amount}${i}`}
-          backgroundColor={background}
-          width={width}
-          height={height}>
+          backgroundColor={ background }
+          width={ width }
+          height={ height }>
         </StyledBlockDiv>
       )
     }
@@ -32,7 +32,7 @@ const Block = ({ amount, background, width = "100%", height = "auto" }) => {
 
   return (
     <StyledDivContainer className="is-flex is-justify-content-space-between">
-      {generateXBlocks()}
+      { generateXBlocks() }
     </StyledDivContainer>
   );
 };

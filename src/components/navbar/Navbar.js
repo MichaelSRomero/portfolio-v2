@@ -9,7 +9,12 @@ const StyledNav = styled.nav`
   z-index: 41 !important; 
 `
 
-const Navbar = ({ logo, navItems, isMenuOpened = false, openMenu = () => {} }) => {
+const Navbar = ({
+  logo,
+  navItems,
+  isMenuOpen = false,
+  openMenu = () => {}
+}) => {
   return (
     <StyledNav className="navbar is-fixed-top" role="navigation" aria-label="main navigation">
       <div className="navbar-brand">
@@ -18,10 +23,10 @@ const Navbar = ({ logo, navItems, isMenuOpened = false, openMenu = () => {} }) =
         </a>
         <a 
           role="button"
-          className={"navbar-burger" + (isMenuOpened ? " is-active" : "")}
+          className={"navbar-burger" + (isMenuOpen ? " is-active" : "")}
           aria-label="menu"
           aria-expanded="false"
-          onClick={openMenu}
+          onClick={ openMenu }
         >
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
@@ -31,10 +36,10 @@ const Navbar = ({ logo, navItems, isMenuOpened = false, openMenu = () => {} }) =
 
       <div 
         id="navbarMenu"
-        className={"navbar-menu" + (isMenuOpened ? " is-active" : "")}
+        className={"navbar-menu" + (isMenuOpen ? " is-active" : "")}
       >
         <div className="navbar-end">
-          {navItems.map(item => <NavItem key={`NavItem-${item.title}`} {...item} />)}
+          { navItems.map(item => <NavItem key={`NavItem-${ item.title }`} { ...item } />) }
         </div>
       </div>
     </StyledNav>

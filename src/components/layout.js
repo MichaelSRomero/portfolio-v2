@@ -34,12 +34,9 @@ const Layout = ({ children }) => {
   return (
     <>
       <header>
-        <NavBar navItems={ navItems } openMenu={ openModal } isMenuOpened={ isModalOpen }/>
+        <NavBar navItems={ navItems } openMenu={ openModal } isMenuOpen={ isModalOpen }/>
       </header>
       <StyledMain>
-        {/* <div className={"modal" + (isModalOpen ? " is-active" : "") } >
-          <div className="modal-background" onClick={openModal}></div>
-        </div> */}
         <Modal isModalOpen={ isModalOpen } openModal={ openModal } closeSlot={ null } />
         { children }
       </StyledMain>
