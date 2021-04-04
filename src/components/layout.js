@@ -5,8 +5,9 @@
  * See: https://www.gatsbyjs.com/docs/use-static-query/
  */
 
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import PropTypes from "prop-types"
+import DeviceContext, { deviceInfo } from "./context/deviceContext";
 // import { useStaticQuery, graphql } from "gatsby"
 
 import NavBar from "./navbar/Navbar";
@@ -19,8 +20,22 @@ const StyledMain = styled.main`
 
 const Layout = ({ children }) => {
   const [isModalOpen, setModal] = useState(false);
-
   const openModal = () => setModal(!isModalOpen);
+
+  const [localDeviceInfo, setLocalDeviceInfo] = useState(deviceInfo);
+  useEffect(() => {
+    function handleResize() {
+      setLocalDeviceInfo({
+        dimensions: {
+          innerHeight: window.innerHeight,
+          innerWidth: window.innerWidth
+        }
+      });
+    }
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  });
   // const data = useStaticQuery(graphql`
   //   query SiteTitleQuery {
   //     site {
@@ -32,7 +47,7 @@ const Layout = ({ children }) => {
   // `)
 
   return (
-    <>
+    <DeviceContext.Provider value={localDeviceInfo}>
       <header>
         <NavBar navItems={ navItems } openMenu={ openModal } isMenuOpen={ isModalOpen }/>
       </header>
@@ -45,7 +60,7 @@ const Layout = ({ children }) => {
         {` `}
         <a href="https://www.gatsbyjs.com">Gatsby</a>
       </footer>
-    </>
+    </DeviceContext.Provider>
   )
 }
 
