@@ -3,37 +3,31 @@ import { convertToCSS } from "../../utils/cssTools";
 
 import styled from 'styled-components';
 
-const StyledDivContainer = styled.div`
-  height: 100%;
-`
-
 const StyledBlockDiv = styled.div`
+  background-size: cover;
   ${({ backgroundColor }) => convertToCSS('background-color', backgroundColor)};
+  ${({ backgroundImage }) => convertToCSS('background-image', `url(${backgroundImage})`)};
+  ${({ backgroundPosition }) => convertToCSS('background-position', backgroundPosition)};
   ${({ width }) => convertToCSS("width", width)};
   ${({ height }) => convertToCSS("height", height)};
 `
 
-const Block = ({ amount, background, width = "100%", height = "auto" }) => {
-  const generateXBlocks = () => {
-    const blocks = [];
-    for (let i = 0; i < amount; i++) {
-      blocks.push(
-        <StyledBlockDiv
-          key={`BlockDiv${amount}${i}`}
-          backgroundColor={ background }
-          width={ width }
-          height={ height }>
-        </StyledBlockDiv>
-      )
-    }
-
-    return blocks;
-  }
-
+const Block = ({
+  backgroundColor = "",
+  backgroundImage = "",
+  backgroundPosition = "",
+  width = "100%",
+  height = "auto"
+}) => {
   return (
-    <StyledDivContainer className="is-flex is-justify-content-space-between">
-      { generateXBlocks() }
-    </StyledDivContainer>
+    <StyledBlockDiv
+      backgroundColor={ backgroundColor }
+      backgroundImage={ backgroundImage }
+      backgroundPosition={ backgroundPosition }
+      width={ width }
+      height={ height }
+    >
+   </StyledBlockDiv>
   );
 };
 
