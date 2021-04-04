@@ -40,7 +40,12 @@ const Landing = () => {
   }
   return (
     <StyledSection className="container is-relative is-flex is-flex-direction-column">
-      {/* <h1 style={{ position: "absolute", bottom: 0, color: "red" }}>Michael Romero</h1> */}
+      <div className="hero" style={{ position: "absolute", bottom: "35%", left: "10%", zIndex: 2 }}>
+        <div className="hero-body">
+          <h1 className="title has-text-white">Michael Romero</h1>
+          <p className="subtitle has-text-white">I {"<3"} Code</p>
+        </div>
+      </div>
       <StyledDiv className="">
           <StaticImage 
             src="../../images/hero-img.png"
