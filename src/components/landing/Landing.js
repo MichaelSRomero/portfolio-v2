@@ -6,7 +6,7 @@ import Block from "./Block";
 import styled from 'styled-components';
 
 const StyledSection = styled.section`
-  height: 100%;
+  height: 100vh;
 `
 
 const StyledDiv = styled.div`
@@ -18,6 +18,10 @@ const StyledDiv = styled.div`
 const StyledBlockContainer = styled.div`
   height: 100%;
 `
+
+const StyledH1 = styled.div`
+  `
+  // text-shadow: 1vmin 1vmin 0 #E79C10, -1vmin -1vmin 0 #D53A33;
 
 const Landing = () => {
   const generateXBlocks = (num, block) => {
@@ -39,11 +43,13 @@ const Landing = () => {
     return blocks;
   }
   return (
-    <StyledSection className="container is-relative is-flex is-flex-direction-column">
-      <div className="hero" style={{ position: "absolute", bottom: "35%", left: "10%", zIndex: 2 }}>
+    <StyledSection className="container is-flex is-flex-direction-column is-clipped">
+      <div className="hero" style={{ position: "absolute", bottom: "35%", zIndex: 2 }}>
         <div className="hero-body">
-          <h1 className="title has-text-white">Michael Romero</h1>
-          <p className="subtitle has-text-white">I {"<3"} Code</p>
+          <StyledH1 className="title is-family-sans-serif has-text-white is-size-3 is-size-5-mobile">Software Engineer</StyledH1>
+          <StyledH1 className="subtitle is-family-sans-serif is-size-1 is-size-3-mobile" style={{  color: "white" }}>Michael Romero</StyledH1>
+          {/* <p className="title has-text-white has-text-weight-bold is-size-3 is-size-5-mobile is-uppercase">Software Engineer</p> */}
+          {/* <p className="subtitle has-text-white has-text-weight-bold is-size-1 is-size-3-mobile is-uppercase">Michael Romero</p> */}
         </div>
       </div>
       <StyledDiv className="">

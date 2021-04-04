@@ -1,12 +1,12 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
 
 import "../styles/main.scss";
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Landing from "../components/landing/Landing";
+import About from "../components/about/About";
 
 const IndexPage = () => (
   // <Layout>
@@ -29,6 +29,7 @@ const IndexPage = () => (
   // </Layout>
   <Layout>
     <Landing />
+    <About />
   </Layout>
 )
 

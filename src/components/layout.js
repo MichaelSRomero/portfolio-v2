@@ -15,7 +15,7 @@ import styled from 'styled-components';
 import Modal from "./modal/Modal";
 
 const StyledMain = styled.main`
-  height: 100vh;
+  height: auto;
 `
 
 const Layout = ({ children }) => {
@@ -55,7 +55,7 @@ const Layout = ({ children }) => {
         <Modal isModalOpen={ isModalOpen } openModal={ openModal } closeSlot={ null } />
         { children }
       </StyledMain>
-      <footer>
+      <footer className="footer">
         © {new Date().getFullYear()}, Built with
         {` `}
         <a href="https://www.gatsbyjs.com">Gatsby</a>
