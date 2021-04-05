@@ -39,7 +39,13 @@ const Navbar = ({
         className={"navbar-menu" + (isMenuOpen ? " is-active" : "")}
       >
         <div className="navbar-end">
-          { navItems.map(item => <NavItem key={`NavItem-${ item.title }`} { ...item } />) }
+          { navItems.map(item => 
+            <NavItem 
+              key={`NavItem-${ item.title }`}
+              onAnchorClick={ isMenuOpen ? openMenu : null }
+              { ...item }
+            />)
+          }
         </div>
       </div>
     </StyledNav>
