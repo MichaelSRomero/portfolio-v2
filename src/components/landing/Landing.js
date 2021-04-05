@@ -64,29 +64,29 @@ const Landing = () => {
         { generateXBlocks(3, { backgroundColor: "--primary-color", width: "13%", height: "inherit" }) }
         <Block
           backgroundColor="--primary-color"
-          backgroundImage={cloud}
-          backgroundPosition={"0%"}
+          backgroundImage={ cloud }
+          backgroundPosition="0%"
           width="13%"
           height="inherit"
         />
         <Block
           backgroundColor="--primary-color"
-          backgroundImage={cloud}
-          backgroundPosition={"20%"}
+          backgroundImage={ cloud }
+          backgroundPosition="20%"
           width="13%"
           height="inherit"
         />
         <Block
           backgroundColor="--primary-color"
-          backgroundImage={cloud}
-          backgroundPosition={"40%"}
+          backgroundImage={ cloud }
+          backgroundPosition="40%"
           width="13%"
           height="inherit"
         />
         <Block
           backgroundColor="--primary-color"
-          backgroundImage={cloud}
-          backgroundPosition={"60%"}
+          backgroundImage={ cloud }
+          backgroundPosition="60%"
           width="13%"
           height="inherit"
         />

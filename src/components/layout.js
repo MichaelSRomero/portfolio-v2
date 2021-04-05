@@ -47,7 +47,7 @@ const Layout = ({ children }) => {
   // `)
 
   return (
-    <DeviceContext.Provider value={localDeviceInfo}>
+    <DeviceContext.Provider value={ localDeviceInfo }>
       <header>
         <NavBar navItems={ navItems } openMenu={ openModal } isMenuOpen={ isModalOpen }/>
       </header>
