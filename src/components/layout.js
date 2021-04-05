@@ -67,23 +67,23 @@ const Layout = ({ children }) => {
 const navItems = [
   {
     title: "about",
-    href: "#",
+    href: "/#about",
   },
   {
     title: "skills",
-    href: "#",
+    href: "/#skills",
   },
   {
     title: "experience",
-    href: "#",
+    href: "/#experience",
   },
   {
     title: "projects",
-    href: "#",
+    href: "/#projects",
   },
   {
     title: "contact",
-    href: "#",
+    href: "/#contact",
   },
 ]
 

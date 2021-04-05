@@ -18,7 +18,7 @@ const Navbar = ({
   return (
     <StyledNav className="navbar container is-fixed-top" role="navigation" aria-label="main navigation">
       <div className="navbar-brand">
-        <a className="navbar-item" href="https://bulma.io">
+        <a className="navbar-item" href="/">
           <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28"/>
         </a>
         <a 
