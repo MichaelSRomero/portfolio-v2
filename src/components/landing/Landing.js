@@ -1,6 +1,6 @@
 import * as React from "react";
 import { StaticImage } from "gatsby-plugin-image"
-import cloud from "../../images/akatsuki-cloud-transparent.png"
+import cloud from "../../images/akatsuki-cloud.png"
 
 import Block from "./Block";
 import styled from 'styled-components';
@@ -46,8 +46,8 @@ const Landing = () => {
     <StyledSection className="container is-flex is-flex-direction-column is-clipped">
       <div className="hero" style={{ position: "absolute", bottom: "35%", zIndex: 2 }}>
         <div className="hero-body">
-          <StyledH1 className="title is-family-sans-serif has-text-white is-size-3 is-size-5-mobile">Software Engineer</StyledH1>
-          <StyledH1 className="subtitle is-family-sans-serif is-size-1 is-size-3-mobile" style={{  color: "white" }}>Michael Romero</StyledH1>
+          <StyledH1 className="subtitle has-text-black is-size-3 is-size-5-mobile">Software Engineer</StyledH1>
+          <StyledH1 className="title is-size-1 is-size-3-mobile" style={{  color: "black", fontWeight: 800 }}>Michael Romero</StyledH1>
           {/* <p className="title has-text-white has-text-weight-bold is-size-3 is-size-5-mobile is-uppercase">Software Engineer</p> */}
           {/* <p className="subtitle has-text-white has-text-weight-bold is-size-1 is-size-3-mobile is-uppercase">Michael Romero</p> */}
         </div>

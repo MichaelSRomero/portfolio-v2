@@ -9,6 +9,10 @@ const StyledNav = styled.nav`
   z-index: 41 !important; 
 `
 
+// const StyledH1 = styled.div`
+//   text-shadow: 0.5vmin 0.5vmin 0 #E79C10, -0.5vmin -0.5vmin 0 #D53A33;
+// `
+
 const Navbar = ({
   logo,
   navItems,
@@ -18,7 +22,7 @@ const Navbar = ({
   return (
     <StyledNav className="navbar container is-fixed-top" role="navigation" aria-label="main navigation">
       <div className="navbar-brand">
-        <a className="navbar-item" href="/">
+        <a className="navbar-item is-family-sans-serif" href="/">
           <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28"/>
         </a>
         <a 
