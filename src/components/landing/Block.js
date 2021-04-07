@@ -17,10 +17,12 @@ const Block = ({
   backgroundImage = "",
   backgroundPosition = "",
   width = "100%",
-  height = "auto"
+  height = "auto",
+  className= ""
 }) => {
   return (
     <StyledBlockDiv
+      className={className}
       backgroundColor={ backgroundColor }
       backgroundImage={ backgroundImage }
       backgroundPosition={ backgroundPosition }

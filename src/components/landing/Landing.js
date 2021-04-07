@@ -31,6 +31,7 @@ const Landing = () => {
       blocks.push(
         <Block
           key={`BlockDiv-${num}-${i}`}
+          className={ block.className }
           backgroundColor={ block.backgroundColor }
           backgroundImage={ block.backgroundImage }
           backgroundPosition={ block.backgroundPosition }
@@ -61,30 +62,30 @@ const Landing = () => {
       </StyledDiv>
 
       <StyledBlockContainer className="is-flex is-justify-content-space-between">
-        { generateXBlocks(3, { backgroundColor: "--primary-color", width: "13%", height: "inherit" }) }
+        { generateXBlocks(3, { className: "has-background-primary", width: "13%", height: "inherit" }) }
         <Block
-          backgroundColor="--primary-color"
+          className="has-background-primary"
           backgroundImage={ cloud }
           backgroundPosition="0%"
           width="13%"
           height="inherit"
         />
         <Block
-          backgroundColor="--primary-color"
+          className="has-background-primary"
           backgroundImage={ cloud }
           backgroundPosition="20%"
           width="13%"
           height="inherit"
         />
         <Block
-          backgroundColor="--primary-color"
+          className="has-background-primary"
           backgroundImage={ cloud }
           backgroundPosition="40%"
           width="13%"
           height="inherit"
         />
         <Block
-          backgroundColor="--primary-color"
+          className="has-background-primary"
           backgroundImage={ cloud }
           backgroundPosition="60%"
           width="13%"

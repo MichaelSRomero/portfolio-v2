@@ -1,5 +1,4 @@
-import * as React from "react"
-import { Link } from "gatsby"
+import React from "react"
 
 import "../styles/main.scss";
 
@@ -7,6 +6,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Landing from "../components/landing/Landing";
 import About from "../components/about/About";
+import Skills from "../components/skills/Skills";
 
 const IndexPage = () => (
   // <Layout>
@@ -30,6 +30,7 @@ const IndexPage = () => (
   <Layout>
     <Landing />
     <About />
+    <Skills />
   </Layout>
 )
 

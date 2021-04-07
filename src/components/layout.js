@@ -8,10 +8,10 @@
 import React, { useState, useEffect } from "react"
 import PropTypes from "prop-types"
 import DeviceContext, { deviceInfo } from "./context/deviceContext";
+import styled from "styled-components";
 // import { useStaticQuery, graphql } from "gatsby"
 
 import NavBar from "./navbar/Navbar";
-import styled from 'styled-components';
 import Modal from "./modal/Modal";
 
 const StyledMain = styled.main`

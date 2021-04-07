@@ -1,23 +1,23 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image"
+import breakpoints from "../../styles/breakpoints";
 
 import styled from 'styled-components';
 
 const StyledSection = styled.section`
-  margin-top: 10rem;
-  padding: 0 3rem;
+  padding: 7rem 3rem;
 
-  @media only screen and (max-width: 768px) {
-    padding: 0 1rem;
+  @media only screen and (max-width: ${breakpoints.mobile}) {
+    padding: 6rem 1rem;
   }
 `
 const StyledMediaContent = styled.div`
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: ${breakpoints.mobile}) {
     margin-bottom: 1rem;
   }
 `
 const StyledMediaRight = styled.div`
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: ${breakpoints.mobile}) {
     margin-left: 0;
     text-align: center;
   }
