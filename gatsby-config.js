@@ -31,6 +31,7 @@ module.exports = {
     `gatsby-plugin-gatsby-cloud`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-styled-components`,
+    `gatsby-plugin-fontawesome-css`,
     {
       resolve: "gatsby-plugin-anchor-links",
       options: {
