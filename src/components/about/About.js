@@ -28,7 +28,7 @@ const About = () => {
     <StyledSection id="about" className="media container tile">
       <StyledMediaContent className="media-content tile">
           <div className="content">
-            <h5 className="subtitle is-4 is-family-secondary is-size-5-mobile">Hi, my name is</h5>
+            <h5 className="subtitle is-4 is-size-5-mobile is-family-secondary">Hi, my name is</h5>
             <h1 className="title is-2 is-size-3-mobile">Michael Romero</h1>
             <p className="is-family-secondary">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
@@ -51,7 +51,7 @@ const About = () => {
         <StaticImage
           imgStyle={{ border: "black 2px solid", borderRadius: "50%", maxHeight: "350px" }}
           src="../../images/Profile-photo.png"
-          alt="Michael Romero"
+          alt="Michael Romero by Eugene Jordan"
           width={ 350 }
         />
       </StyledMediaRight>

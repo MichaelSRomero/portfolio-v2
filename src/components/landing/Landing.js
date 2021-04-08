@@ -8,17 +8,14 @@ import styled from 'styled-components';
 const StyledSection = styled.section`
   height: 100vh;
 `
-
 const StyledDiv = styled.div`
   position: absolute;
   bottom: -1%;
   left: -5%;
 `
-
 const StyledBlockContainer = styled.div`
   height: 100%;
 `
-
 const StyledH1 = styled.div`
   `
   // text-shadow: 1vmin 1vmin 0 #E79C10, -1vmin -1vmin 0 #D53A33;

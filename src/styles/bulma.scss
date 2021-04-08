@@ -13,6 +13,14 @@ $complimentary: #EBF5FF;
 $family-primary: muli, sans-serif;
 $family-secondary: 'Space Mono', monospace;
 $family-sans-serif: 'Sarpanch', sans-serif;
-$weight-bold: 900;
+$weight-black: 900;
 
 @import "~bulma/bulma.sass";
+
+.has-background-secondary {
+  background-color: $secondary;
+}
+
+.has-text-weight-black {
+  font-weight: $weight-black;
+}
