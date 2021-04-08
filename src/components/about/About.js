@@ -5,7 +5,7 @@ import breakpoints from "../../styles/breakpoints";
 import styled from 'styled-components';
 
 const StyledSection = styled.section`
-  padding: 7rem 3rem;
+  padding: 7rem 5rem;
 
   @media only screen and (max-width: ${breakpoints.mobile}) {
     padding: 6rem 1rem;
