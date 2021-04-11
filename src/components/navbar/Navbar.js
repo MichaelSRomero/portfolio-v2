@@ -20,7 +20,7 @@ const Navbar = ({
   openMenu = () => {}
 }) => {
   return (
-    <StyledNav className="navbar container is-fixed-top" role="navigation" aria-label="main navigation">
+    <StyledNav className="navbar is-fixed-top has-background-primary" role="navigation" aria-label="main navigation">
       <div className="navbar-brand">
         <a className="navbar-item is-family-sans-serif" href="/">
           <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28"/>

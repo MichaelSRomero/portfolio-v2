@@ -5,7 +5,7 @@ import { AnchorLink } from "gatsby-plugin-anchor-links";
 const NavItem = ({ title, href, onAnchorClick }) => {
   return (
     <AnchorLink
-      className="navbar-item"
+      className="navbar-item has-text-black"
       to={ href }
       title={ title }
       onAnchorLinkClick={onAnchorClick}
