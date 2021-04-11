@@ -34,17 +34,25 @@ const Skills = () => {
       </StyledDiv>
 
       <StyledDiv className="has-background-secondary has-text-white">
-        <StyledContainer className="container">
+        <StyledContainer className="container is-flex">
           <div>
             <Icon icon={ faCog } size="lg" >
-              <h3 className="subtitle is-3 is-5-mobile has-text-weight-bold has-text-white">Strong</h3>
+              <h3 className="subtitle is-1 is-size-2-mobile has-text-weight-bold has-text-white">Strong</h3>
             </Icon>
-            <div className="columns is-family-secondary">
-              <p className="column">Javascript</p>
+            <div className="is-flex is-family-secondary">
+              <p className="">▹ Javascript</p>
+              <p className="">▹ React</p>
             </div>
           </div>
-          <div className="is-flex is-flex-direction-column">
 
+          <div>
+            <Icon icon={ faCog } size="lg" >
+              <h3 className="subtitle is-1 is-size-2-mobile has-text-weight-bold has-text-white">Knowledge</h3>
+            </Icon>
+            <div className="columns is-family-secondary">
+              <p className="column">▹ Javascript</p>
+              <p className="column">▹ React</p>
+            </div>
           </div>
         </StyledContainer>
       </StyledDiv>

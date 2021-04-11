@@ -1,96 +1,69 @@
-import * as React from "react";
+import React from "react";
 import { StaticImage } from "gatsby-plugin-image"
-import cloud from "../../images/akatsuki-cloud.png"
+import breakpoints from "../../styles/breakpoints";
 
-import Block from "./Block";
 import styled from 'styled-components';
 
 const StyledSection = styled.section`
   height: 100vh;
+  background-color: #D1512C;
+  padding: 4rem 3rem;
+
+  @media only screen and (max-width: ${ breakpoints.mobile }) {
+    padding: 4rem 0 0 0;
+  }
+
+  @media only screen and (max-width: ${ breakpoints.tablet })
+                     and (orientation: landscape) {
+    height: 100%;
+  }
 `
-const StyledDiv = styled.div`
-  position: absolute;
-  bottom: -1%;
-  left: -5%;
-`
-const StyledBlockContainer = styled.div`
+const StyledContainer = styled.div`
   height: 100%;
+
+  @media only screen and (max-width: ${ breakpoints.desktop }) {
+    flex-direction: column-reverse;
+  }
 `
-const StyledH1 = styled.div`
-  `
-  // text-shadow: 1vmin 1vmin 0 #E79C10, -1vmin -1vmin 0 #D53A33;
+  const StyledLeftContent = styled.div`
+  height: 100%;
+  width: 45%;
+
+  @media only screen and (max-width: ${ breakpoints.desktop }) {
+    width: 100%;
+  }
+`
+const StyledRightContent = styled.div`
+  width: 55%;
+  padding: 1rem 2rem;
+
+  @media only screen and (max-width: ${ breakpoints.desktop }) {
+    width: 100%;
+    padding: 1rem;
+  }
+`
+  // background-color: #BC5B35;
 
 const Landing = () => {
-  const generateXBlocks = (num, block) => {
-    const blocks = [];
-
-    for (let i = 0; i < num; i++) {
-      blocks.push(
-        <Block
-          key={`BlockDiv-${num}-${i}`}
-          className={ block.className }
-          backgroundColor={ block.backgroundColor }
-          backgroundImage={ block.backgroundImage }
-          backgroundPosition={ block.backgroundPosition }
-          width={ block.width }
-          height={ block.height }
-        />
-      )
-    }
-
-    return blocks;
-  }
   return (
-    <StyledSection className="container is-flex is-flex-direction-column is-clipped">
-      <div className="hero" style={{ position: "absolute", bottom: "35%", zIndex: 2 }}>
-        <div className="hero-body">
-          <StyledH1 className="subtitle has-text-black is-size-3 is-size-5-mobile">Software Engineer</StyledH1>
-          <StyledH1 className="title is-size-1 is-size-3-mobile" style={{  color: "black", fontWeight: 800 }}>Michael Romero</StyledH1>
-          {/* <p className="title has-text-white has-text-weight-bold is-size-3 is-size-5-mobile is-uppercase">Software Engineer</p> */}
-          {/* <p className="subtitle has-text-white has-text-weight-bold is-size-1 is-size-3-mobile is-uppercase">Michael Romero</p> */}
-        </div>
-      </div>
-      <StyledDiv className="">
+    <StyledSection>
+      <StyledContainer className="container is-flex is-align-items-center">
+        <StyledLeftContent className="is-flex is-align-items-center is-justify-content-center">
           <StaticImage 
-            src="../../images/hero-img.png"
+            src="../../images/akatsuki-cloud-transparent.png"
             alt="hero"
-            height={750}
+            height={500}
           />
-      </StyledDiv>
+        </StyledLeftContent>
 
-      <StyledBlockContainer className="is-flex is-justify-content-space-between">
-        { generateXBlocks(3, { className: "has-background-primary", width: "13%", height: "inherit" }) }
-        <Block
-          className="has-background-primary"
-          backgroundImage={ cloud }
-          backgroundPosition="0%"
-          width="13%"
-          height="inherit"
-        />
-        <Block
-          className="has-background-primary"
-          backgroundImage={ cloud }
-          backgroundPosition="20%"
-          width="13%"
-          height="inherit"
-        />
-        <Block
-          className="has-background-primary"
-          backgroundImage={ cloud }
-          backgroundPosition="40%"
-          width="13%"
-          height="inherit"
-        />
-        <Block
-          className="has-background-primary"
-          backgroundImage={ cloud }
-          backgroundPosition="60%"
-          width="13%"
-          height="inherit"
-        />
-      </StyledBlockContainer>
+        <StyledRightContent className="is-flex is-flex-direction-column is-align-items-center">
+          <h1 className="title is-1 is-size-3-mobile has-text-white">Michael Romero</h1>
+          <h2 className="subtitle is-3 is-size-5-mobile has-text-white">Software Engineer</h2>
+          <button className="button is-fullwidth is-large">Get In Touch</button>
+        </StyledRightContent>
+      </StyledContainer>
     </StyledSection>
-  )
-}
+  );
+};
 
 export default Landing;
