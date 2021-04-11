@@ -7,7 +7,7 @@
 
 import React, { useState, useEffect } from "react"
 import PropTypes from "prop-types"
-import DeviceContext, { deviceInfo } from "./context/deviceContext";
+import DeviceContext, { deviceInfo } from "./store/deviceStore";
 import styled from "styled-components";
 // import { useStaticQuery, graphql } from "gatsby"
 
@@ -69,10 +69,6 @@ const navItems = [
     title: "about",
     href: "/#about",
   },
-  // {
-  //   title: "skills",
-  //   href: "/#skills",
-  // },
   {
     title: "experience",
     href: "/#experience",

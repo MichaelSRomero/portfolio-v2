@@ -12,6 +12,7 @@ $primary: #D1512C;
 $secondary: #376792;
 $complimentary: #EBF5FF;
 $white: rgb(235, 235, 235);
+$black: #0A0A0A;
 
 // Typography
 $family-primary: "Teko", sans-serif;
@@ -25,6 +26,9 @@ $button-family: $family-secondary;
 $button-background-color: rgba(0, 0, 0, 0);
 $button-hover-color: rgb(0, 0, 0);
 $button-hover-background-color: $white;
+
+// Content
+$content-heading-color: $black;
 
 @import "~bulma/bulma.sass";
 

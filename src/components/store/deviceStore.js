@@ -1,6 +1,6 @@
 import { createContext } from "react";
 
-const DeviceContext = createContext(deviceInfo);
+const DeviceStore = createContext(deviceInfo);
 
 export const deviceInfo = {
   dimensions: {
@@ -9,4 +9,4 @@ export const deviceInfo = {
   }
 }
 
-export default DeviceContext;
+export default DeviceStore;
