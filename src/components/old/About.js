@@ -3,18 +3,15 @@ import { StaticImage } from "gatsby-plugin-image"
 import breakpoints from "../../styles/breakpoints";
 
 import styled from 'styled-components';
-import Container from "../ui/Container";
 
 const StyledSection = styled.section`
-  padding: 7rem 0;
+  padding: 7rem 5rem;
 
   @media only screen and (max-width: ${breakpoints.mobile}) {
-    padding: 6rem 0;
+    padding: 6rem 1rem;
   }
 `
-const StyledLeftContent = styled.div`
-  width: 100%;
-
+const StyledMediaContent = styled.div`
   @media only screen and (max-width: ${breakpoints.mobile}) {
     margin-bottom: 1rem;
   }
@@ -28,14 +25,8 @@ const StyledMediaRight = styled.div`
 
 const About = () => {
   return (
-    <StyledSection id="about" className="has-background-pure-white">
-      <Container
-        leftContent={
-          <StyledLeftContent className="content">
-            <h1>ABOUT ME</h1>
-          </StyledLeftContent>
-        }
-        rightContent={
+    <StyledSection id="about" className="media container tile">
+      <StyledMediaContent className="media-content tile">
           <div className="content">
             <h5 className="subtitle is-4 is-size-5-mobile is-family-secondary">Hi, my name is</h5>
             <h1 className="title is-2 is-size-3-mobile">Michael Romero</h1>
@@ -54,8 +45,16 @@ const About = () => {
               works as well!
             </p>
           </div>
-        }
-      />
+      </StyledMediaContent>
+
+      <StyledMediaRight className="media-right tile">
+        <StaticImage
+          imgStyle={{ border: "black 2px solid", borderRadius: "50%", maxHeight: "350px" }}
+          src="../../images/Profile-photo.png"
+          alt="Michael Romero by Eugene Jordan"
+          width={ 350 }
+        />
+      </StyledMediaRight>
     </StyledSection>
   )
 };

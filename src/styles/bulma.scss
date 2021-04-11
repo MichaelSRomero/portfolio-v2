@@ -1,20 +1,27 @@
 @charset "utf-8";
+// 1st set of fonts
 @import url("https://use.typekit.net/qjf4ivp.css");
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital@0;1&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Sarpanch:900');
+// 2nd set of fonts
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
 // Colors
 $primary: #D1512C;
 // $primary: #3C3B8D;
 $secondary: #376792;
 $complimentary: #EBF5FF;
-// $white: rgb(235, 235, 235);
+$white: rgb(235, 235, 235);
 
 // Typography
-$family-primary: muli, sans-serif;
-$family-secondary: 'Space Mono', monospace;
+$family-primary: "Teko", sans-serif;
+$family-secondary: 'Montserrat', sans-serif;
 $family-sans-serif: 'Sarpanch', sans-serif;
 $weight-black: 900;
+
+// Button
+$button-color: $white;
+$button-background-color: rgba(0, 0, 0, 0);
 
 @import "~bulma/bulma.sass";
 
@@ -22,6 +29,14 @@ $weight-black: 900;
   background-color: $secondary;
 }
 
+.has-background-pure-white {
+  background-color: rgb(255, 255, 255);
+}
+
 .has-text-weight-black {
   font-weight: $weight-black;
+}
+
+.has-no-border-radius {
+  border-radius: 0;;
 }
